@@ -1,2 +1,2 @@
-ctrl + K + V ---------- tela lateral 
-ctrl + shift + p Create table of contents
+ctrl + K + V ---------- Markdown: Open preview to side
+ctrl + shift + p ------------ Markdown: Create table of contents
