@@ -1,0 +1,2 @@
+ctrl + K + V ---------- tela lateral 
+ctrl + shift + p Create table of contents
