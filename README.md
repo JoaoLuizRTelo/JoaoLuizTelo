@@ -14,10 +14,36 @@ ENGENHARIA DE SOFTWARE
     - [3.2. Diagrama ER](#32-diagrama-er)
       - [Explicação das Entidades e Relacionamentos:](#explicação-das-entidades-e-relacionamentos)
     - [3.2. Diagramas de classes de uso](#32-diagramas-de-classes-de-uso)
-    - [3.3. diagrama de atividade \*\*\*](#33-diagrama-de-atividade-)
+    - [3.3. diagrama de atividade](#33-diagrama-de-atividade)
+    - [Explicação do Diagrama:](#explicação-do-diagrama)
     - [3.4. diagrama de componentes](#34-diagrama-de-componentes)
-    - [3.5. diagrama implantação](#35-diagrama-implantação)
+    - [**Explicação do Diagrama**:](#explicação-do-diagrama-1)
+    - [3.5. diagrama de implantação](#35-diagrama-de-implantação)
+    - [**Explicação do Diagrama**:](#explicação-do-diagrama-2)
+    - [3.6. Diagramas C4](#36-diagramas-c4)
+      - [3.6.1. Diagrama de contexto](#361-diagrama-de-contexto)
+      - [3.6.2. Diagrama de container](#362-diagrama-de-container)
+      - [3.6.3. Diagrama de componente](#363-diagrama-de-componente)
+    - [**Explicação**:](#explicação-1)
   - [4. Hitórias de usuário](#4-hitórias-de-usuário)
+    - [4.1. Cadastro de Usuários](#41-cadastro-de-usuários)
+    - [4.2. Autenticação (Login e Senha)](#42-autenticação-login-e-senha)
+    - [4.3. Recuperação de Senha](#43-recuperação-de-senha)
+    - [4.4. Bloqueio e Desbloqueio de Usuários](#44-bloqueio-e-desbloqueio-de-usuários)
+    - [4.5. Registro de Log de Ações](#45-registro-de-log-de-ações)
+    - [4.6. Cadastro de Pacientes](#46-cadastro-de-pacientes)
+    - [4.7. Atualização de Dados Cadastrais](#47-atualização-de-dados-cadastrais)
+    - [4.8. Histórico de Atendimentos e Débitos](#48-histórico-de-atendimentos-e-débitos)
+    - [4.9. Anexar Documentos ao Cadastro](#49-anexar-documentos-ao-cadastro)
+    - [4.10. Busca e Filtros de Pacientes](#410-busca-e-filtros-de-pacientes)
+    - [4.11. Alteração do Valor do Débito](#411-alteração-do-valor-do-débito)
+    - [4.12. Conformidade com a LGPD](#412-conformidade-com-a-lgpd)
+    - [4.13. Registro de Transações](#413-registro-de-transações)
+    - [4.14. Interface Intuitiva e Responsiva](#414-interface-intuitiva-e-responsiva)
+    - [4.15. Relatório de Procedimentos Realizados](#415-relatório-de-procedimentos-realizados)
+    - [4.16. Acessar Histórico de Débito e Procedimentos](#416-acessar-histórico-de-débito-e-procedimentos)
+    - [4.17. Vincular Procedimentos aos Profissionais](#417-vincular-procedimentos-aos-profissionais)
+    - [4.18. Cadastro de Profissionais](#418-cadastro-de-profissionais)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de telas](#6-diagrama-de-navegação-de-telas)
   - [Anexos](#anexos)
@@ -262,15 +288,348 @@ Esse diagrama reflete os principais relacionamentos e entidades do sistema, ajud
 
 ![classe de uso](/diagrama-caso-de-uso.png)
 
-### 3.3. diagrama de atividade ***
+>[!tip]
+>Faça um diagrama de classes de uso usando Markdown e Mermaid, para os requisitos abaixo:
+
+```mermaid
+graph TD
+  subgraph Usuário
+    UC1[Cadastro de Usuários]
+    UC2[Autenticação com Login e Senha]
+    UC3[Recuperação de Senha]
+  end
+
+  subgraph Administrador
+    UC4[Bloquear e Desbloquear Usuários]
+    UC5[Registrar Log de Ações]
+    UC6[Cadastrar Pacientes]
+    UC7[Atualizar Dados Cadastrais]
+    UC8[Gerar Histórico de Atendimentos e Débitos]
+    UC9[Anexar Documentos ao Cadastro]
+    UC10[Buscar e Filtrar Pacientes]
+    UC11[Alteração de Débito]
+    UC12[Conformidade com LGPD]
+    UC13[Registrar Transações]
+    UC14[Interface Intuitiva e Responsiva]
+    UC15[Relatório de Procedimentos]
+    UC16[Acessar Histórico de Débito e Procedimentos]
+    UC17[Vincular Profissional ao Procedimento]
+    UC18[Cadastrar Profissionais]
+  end
+
+  Usuario -->|Interage| UC1
+  Usuario -->|Interage| UC2
+  Usuario -->|Interage| UC3
+
+  Administrador -->|Gerencia| UC4
+  Administrador -->|Acompanha| UC5
+  Administrador -->|Cadastra| UC6
+  Administrador -->|Edita| UC7
+  Administrador -->|Consulta| UC8
+  Administrador -->|Anexa| UC9
+  Administrador -->|Pesquisa| UC10
+  Administrador -->|Modifica| UC11
+  Administrador -->|Assegura| UC12
+  Administrador -->|Registra| UC13
+  Administrador -->|Desenha| UC14
+  Administrador -->|Gera| UC15
+  Administrador -->|Consulta| UC16
+  Administrador -->|Vincula| UC17
+  Administrador -->|Cadastra| UC18
+
+```
+
+### 3.3. diagrama de atividade
 
 ![atividade](/diagrama-atividade.png)
 
+>[!tip]
+>Faça um diagrama de atividade usando Markdown e Mermaid, para os requisitos abaixo:
+
+```mermaid
+graph TD;
+    Inicio((Início)) -->|Cadastro| CadastroUsuario
+    CadastroUsuario -->|Autenticação| Autenticacao
+    Autenticacao -->|Login bem-sucedido| AcessoSistema
+    Autenticacao -->|Esqueci a senha| RecuperacaoSenha
+    RecuperacaoSenha --> Autenticacao
+
+    AcessoSistema -->|Atualizar Cadastro| AtualizarDados
+    AcessoSistema -->|Bloquear/Desbloquear Usuário| BloquearUsuario
+    AcessoSistema -->|Registrar Log de Ações| RegistrarLog
+    AcessoSistema -->|Cadastrar Pacientes| CadastrarPaciente
+    AcessoSistema -->|Anexar Documentos| AnexarDocumentos
+    AcessoSistema -->|Gerar Histórico de Atendimentos e Débitos| GerarHistorico
+    AcessoSistema -->|Realizar Transação| RegistrarTransacao
+    AcessoSistema -->|Consultar Pacientes| BuscarPacientes
+    AcessoSistema -->|Alterar Débito| AlterarDebito
+    AcessoSistema -->|Acessar Histórico de Débito| AcessarHistoricoDebito
+    AcessoSistema -->|Cadastrar Profissionais| CadastrarProfissionais
+    AcessoSistema -->|Registrar Procedimento| RegistrarProcedimento
+    RegistrarProcedimento -->|Vincular Profissional| VincularProfissional
+
+    AcessoSistema -->|Gerar Relatórios| GerarRelatorios
+    GerarRelatorios --> RelatorioProcedimentos
+
+    RelatorioProcedimentos -->|Fim| Fim((Fim))
+    BuscarPacientes -->|Fim| Fim
+    RegistrarLog -->|Fim| Fim
+    RegistrarTransacao -->|Fim| Fim
+    CadastrarProfissionais -->|Fim| Fim
+    VincularProfissional -->|Fim| Fim
+    AlterarDebito -->|Fim| Fim
+```
+
+---
+### Explicação do Diagrama:
+1. O **usuário** pode iniciar o fluxo cadastrando-se no sistema.
+2. O usuário realiza a **autenticação** para acessar o sistema.
+3. Caso esqueça a senha, pode seguir o fluxo de **recuperação**.
+4. Uma vez autenticado, pode realizar diversas ações:
+   - Atualizar seus dados.
+   - Bloquear/desbloquear usuários.
+   - Registrar logs de ações.
+   - Cadastrar pacientes e profissionais.
+   - Anexar documentos.
+   - Buscar pacientes e aplicar filtros.
+   - Alterar débitos e acessar histórico financeiro.
+   - Registrar e vincular procedimentos a profissionais.
+   - Gerar relatórios de procedimentos.
+5. O fluxo se encerra após cada funcionalidade ser concluída.
+
+Isso representa um **panorama geral** do sistema com base nos requisitos.
+
+
 ### 3.4. diagrama de componentes
 
-### 3.5. diagrama implantação
+> [!tip]
+> Faça um diagrama de componentes usando Markdown e Mermaid, para os requisitos abaixo:
+
+
+```mermaid
+graph TD;
+    %% Definição dos Componentes
+    UsuarioInterface["🖥️ Interface do Usuário\n(Next.js)"]
+    API["🌐 API REST\n(FastAPI)"]
+    BancoDeDados["🗄️ Banco de Dados\n(NeonDB - PostgreSQL)"]
+
+    %% Definição dos Módulos do Sistema
+    ComponenteAutenticacao["🔐 Autenticação"]
+    ComponenteUsuarios["👤 Gerenciamento de Usuários"]
+    ComponentePacientes["🏥 Gerenciamento de Pacientes"]
+    ComponenteFinanceiro["💰 Gestão Financeira"]
+    ComponenteDocumentos["📂 Gestão de Documentos"]
+    ComponenteRelatorios["📊 Geração de Relatórios"]
+    ComponenteLGPD["⚖️ Conformidade LGPD"]
+
+    %% Conexões
+    UsuarioInterface -->|Requisições| API
+    API -->|Acessa| BancoDeDados
+
+    API --> ComponenteAutenticacao
+    API --> ComponenteUsuarios
+    API --> ComponentePacientes
+    API --> ComponenteFinanceiro
+    API --> ComponenteDocumentos
+    API --> ComponenteRelatorios
+    API --> ComponenteLGPD
+
+    ComponenteAutenticacao -->|Login/Senha| BancoDeDados
+    ComponenteUsuarios -->|Cadastro, Bloqueio| BancoDeDados
+    ComponentePacientes -->|CRUD Pacientes| BancoDeDados
+    ComponenteFinanceiro -->|Débitos, Transações| BancoDeDados
+    ComponenteDocumentos -->|Anexos| BancoDeDados
+    ComponenteRelatorios -->|Relatórios de Atendimento| BancoDeDados
+    ComponenteLGPD -->|Logs, Segurança| BancoDeDados
+
+```
+
+---
+
+### **Explicação do Diagrama**:
+1. **Camada de Interface**:  
+   - **`Interface do Usuário (Next.js)`**: A aplicação frontend onde os usuários interagem.  
+   - Comunica-se com a API para realizar operações como login, cadastro, busca de pacientes, etc.
+
+2. **Camada de API**:  
+   - **`API REST (FastAPI)`**: Intermediário entre o frontend e o banco de dados.  
+   - Processa requisições e redireciona para os componentes responsáveis.
+
+3. **Camada de Componentes**:  
+   - **`Autenticação`**: Responsável pelo login, logout e recuperação de senha.  
+   - **`Gerenciamento de Usuários`**: Cadastro, bloqueio e desbloqueio.  
+   - **`Gerenciamento de Pacientes`**: CRUD de pacientes e histórico de atendimento.  
+   - **`Gestão Financeira`**: Controle de débitos e transações financeiras.  
+   - **`Gestão de Documentos`**: Upload e gerenciamento de arquivos anexos.  
+   - **`Geração de Relatórios`**: Criação de relatórios detalhados.  
+   - **`Conformidade LGPD`**: Registro de logs e proteção de dados.
+
+4. **Camada de Banco de Dados**:  
+   - **`PostgreSQL (NeonDB)`**: Armazena todas as informações do sistema.
+
+---
+
+Esse diagrama mostra a **arquitetura baseada em componentes** e como cada parte do sistema interage.
+
+
+### 3.5. diagrama de implantação
+
+```mermaid
+graph TD;
+    %% Definição dos nós físicos
+    Usuario["🖥️ Usuário\n(Navegador)"]
+    ServidorFrontend["🌍 Servidor Frontend\n(Vercel - Next.js)"]
+    ServidorBackend["🔧 Servidor Backend\n(AWS EC2 - FastAPI)"]
+    BancoDeDados["🗄️ Banco de Dados\n(NeonDB - PostgreSQL)"]
+    Armazenamento["📂 Armazenamento de Arquivos\n(AWS S3)"]
+
+    %% Conexões entre os componentes
+    Usuario -->|Acessa| ServidorFrontend
+    ServidorFrontend -->|Requisições API| ServidorBackend
+    ServidorBackend -->|Consulta e grava dados| BancoDeDados
+    ServidorBackend -->|Armazena documentos| Armazenamento
+```
+
+---
+
+### **Explicação do Diagrama**:
+1. **Usuário**:  
+   - Acessa a aplicação via **navegador**.
+
+2. **Servidor Frontend** (Next.js - Vercel):  
+   - Responsável por renderizar a interface e encaminhar requisições para a API.
+
+3. **Servidor Backend** (FastAPI - AWS EC2):  
+   - Processa as requisições e executa regras de negócio.
+
+4. **Banco de Dados** (NeonDB - PostgreSQL):  
+   - Armazena usuários, pacientes, históricos, transações, etc.
+
+5. **Armazenamento de Arquivos** (AWS S3):  
+   - Guarda documentos anexados.
+
+---
+
+Esse diagrama mostra **como os componentes do sistema são implantados na infraestrutura**. 
+
+### 3.6. Diagramas C4
+#### 3.6.1. Diagrama de contexto
+```mermaid
+graph TB;
+    Usuario["🧑 Usuário\n(Secretária, Médico, Administrador)"]
+    Sistema["💻 Sistema de Gestão de Pacientes"]
+    API["🌐 API REST"]
+    BancoDeDados["🗄️ Banco de Dados"]
+    Armazenamento["📂 Armazenamento de Arquivos"]
+
+    Usuario -->|Interage via navegador| Sistema
+    Sistema -->|Requisições| API
+    API -->|Consulta/Escrita| BancoDeDados
+    API -->|Upload/Download| Armazenamento
+
+```
+#### 3.6.2. Diagrama de container
+```mermaid
+graph TB;
+    Usuario["🧑 Usuário\n(Navegador)"]
+    Frontend["🌍 Frontend\n(Next.js - Vercel)"]
+    Backend["🔧 Backend\n(FastAPI - AWS EC2)"]
+    BancoDeDados["🗄️ Banco de Dados\n(NeonDB - PostgreSQL)"]
+    Armazenamento["📂 Armazenamento de Arquivos\n(AWS S3)"]
+
+    Usuario -->|Acessa via navegador| Frontend
+    Frontend -->|Requisições API| Backend
+    Backend -->|Consulta/Escrita| BancoDeDados
+    Backend -->|Armazena/Recupera arquivos| Armazenamento
+```
+#### 3.6.3. Diagrama de componente
+```mermaid
+graph TB;
+    Backend["🔧 Backend\n(FastAPI)"]
+    Autenticacao["🔐 Autenticação"]
+    Usuarios["👤 Gerenciamento de Usuários"]
+    Pacientes["🏥 Gerenciamento de Pacientes"]
+    Financeiro["💰 Gestão Financeira"]
+    Documentos["📂 Gestão de Documentos"]
+    Relatorios["📊 Geração de Relatórios"]
+    LGPD["⚖️ Conformidade LGPD"]
+
+    Backend --> Autenticacao
+    Backend --> Usuarios
+    Backend --> Pacientes
+    Backend --> Financeiro
+    Backend --> Documentos
+    Backend --> Relatorios
+    Backend --> LGPD
+```
+
+---
+
+### **Explicação**:
+- O **diagrama de contexto** mostra a visão geral do sistema.
+- O **diagrama de container** detalha os principais módulos do sistema.
+- O **diagrama de componentes** descreve a organização interna do backend.
+
+
+
+
 
 ## 4. Hitórias de usuário
+
+### 4.1. Cadastro de Usuários  
+**Como administrador**, eu quero cadastrar novos usuários no sistema para que eles possam acessá-lo e utilizar suas funcionalidades.
+
+### 4.2. Autenticação (Login e Senha)  
+**Como usuário**, eu quero fazer login no sistema utilizando e-mail e senha para que eu possa acessar minhas informações e funcionalidades disponíveis.
+
+### 4.3. Recuperação de Senha  
+**Como usuário**, eu quero poder recuperar minha senha caso eu a esqueça para que eu possa continuar acessando o sistema sem precisar de suporte técnico.
+
+### 4.4. Bloqueio e Desbloqueio de Usuários  
+**Como administrador**, eu quero bloquear e desbloquear usuários para que eu possa controlar o acesso ao sistema e garantir a segurança das informações.
+
+### 4.5. Registro de Log de Ações  
+**Como administrador**, eu quero visualizar um histórico de todas as ações realizadas pelos usuários para que eu possa monitorar atividades e garantir a transparência e segurança do sistema.
+
+### 4.6. Cadastro de Pacientes  
+**Como recepcionista**, eu quero cadastrar pacientes com informações completas para que os profissionais possam acessá-las durante os atendimentos.
+
+### 4.7. Atualização de Dados Cadastrais  
+**Como usuário autorizado**, eu quero atualizar os dados cadastrais dos pacientes para que as informações estejam sempre corretas e atualizadas.
+
+### 4.8. Histórico de Atendimentos e Débitos  
+**Como profissional de saúde**, eu quero acessar o histórico de atendimentos e débitos de um paciente para que eu possa ter um acompanhamento completo do seu tratamento.
+
+### 4.9. Anexar Documentos ao Cadastro  
+**Como usuário autorizado**, eu quero anexar documentos ao cadastro dos pacientes para que todas as informações relevantes fiquem centralizadas e acessíveis.
+
+### 4.10. Busca e Filtros de Pacientes  
+**Como usuário autorizado**, eu quero pesquisar pacientes e aplicar filtros para que eu encontre rapidamente as informações desejadas.
+
+### 4.11. Alteração do Valor do Débito  
+**Como administrador**, eu quero aumentar ou reduzir o valor do débito de um paciente para que eu possa corrigir valores e manter os registros financeiros atualizados.
+
+### 4.12. Conformidade com a LGPD  
+**Como administrador**, eu quero garantir que o sistema esteja em conformidade com a LGPD para que os dados dos pacientes sejam protegidos conforme a legislação.
+
+### 4.13. Registro de Transações  
+**Como administrador**, eu quero que todas as transações financeiras sejam registradas para que eu possa ter controle e transparência sobre os valores movimentados.
+
+### 4.14. Interface Intuitiva e Responsiva  
+**Como usuário**, eu quero que a interface do sistema seja intuitiva e responsiva para que eu possa utilizá-la com facilidade em diferentes dispositivos.
+
+### 4.15. Relatório de Procedimentos Realizados  
+**Como profissional de saúde**, eu quero gerar relatórios dos procedimentos realizados para que eu possa acompanhar e analisar os atendimentos feitos.
+
+### 4.16. Acessar Histórico de Débito e Procedimentos  
+**Como administrador**, eu quero acessar o histórico de débitos e procedimentos de um paciente para que eu possa conferir os registros financeiros e clínicos com precisão.
+
+### 4.17. Vincular Procedimentos aos Profissionais  
+**Como administrador**, eu quero vincular os procedimentos realizados ao profissional responsável para que eu possa manter um registro claro de quem realizou cada atendimento.
+
+### 4.18. Cadastro de Profissionais  
+**Como administrador**, eu quero cadastrar profissionais no sistema para que eles possam ser associados aos procedimentos e pacientes atendidos.
+
 
 ## 5. Protótipo de telas
 
