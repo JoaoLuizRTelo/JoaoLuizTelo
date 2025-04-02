@@ -46,6 +46,7 @@ ENGENHARIA DE SOFTWARE
     - [4.18. Cadastro de Profissionais](#418-cadastro-de-profissionais)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de telas](#6-diagrama-de-navegação-de-telas)
+  - [](#)
   - [Anexos](#anexos)
     - [A.1. Script SQL](#a1-script-sql)
     - [A.2. Dados artificiais para testes de banco](#a2-dados-artificiais-para-testes-de-banco)
@@ -632,9 +633,35 @@ graph TB;
 
 
 ## 5. Protótipo de telas
+![tela](/Interface-gestao-de-debito.png)
+
 
 ## 6. Diagrama de navegação de telas
 
+```mermaid
+graph TD
+    Start[Início] -->|Acessar| Login[Login]
+    Login -->|Sucesso| Dashboard[Dashboard Principal]
+    Login -->|Esqueci a Senha| Recuperacao[Recuperação de Senha]
+
+    Dashboard -->|Gerenciar Usuários| Usuarios[Gerenciar Usuários]
+    Dashboard -->|Cadastrar Paciente| CadastroPaciente[Cadastrar Paciente]
+    Dashboard -->|Visualizar Histórico| Historico[Histórico de Pacientes]
+    Dashboard -->|Financeiro| Financeiro[Gestão Financeira]
+
+    Usuarios -->|Novo Usuário| CadastroUsuario[Cadastrar Usuário]
+    Usuarios -->|Bloquear/Desbloquear| GerenciarAcesso[Gerenciar Acesso]
+    
+    CadastroPaciente -->|Anexar Documentos| Documentos[Anexar Documentos]
+
+    Historico -->|Gerar Relatórios| Relatorios[Relatórios]
+    
+    Financeiro -->|Alterar Débitos| Debitos[Gerenciar Débitos]
+
+```
+---
+![diagrama de navegação de telas](/diagrama-navegacao-de-telas.png)
+---
 ## Anexos
 
 ### A.1. Script SQL
