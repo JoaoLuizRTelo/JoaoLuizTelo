@@ -285,60 +285,14 @@ erDiagram
 Esse diagrama reflete os principais relacionamentos e entidades do sistema, ajudando a visualizar a modelagem do banco de dados com base nos requisitos fornecidos.
 
 
-### 3.2. Diagramas de classes de uso
+### 3.2. Diagramas de casos de uso
 
 ![classe de uso](/diagrama-caso-de-uso.png)
 
 >[!tip]
->Faça um diagrama de classes de uso usando Markdown e Mermaid, para os requisitos abaixo:
+>Faça um diagrama de casos de uso usando Markdown e PlantUML, para os requisitos abaixo:
 
-```mermaid
-graph TD
-  subgraph Usuário
-    UC1[Cadastro de Usuários]
-    UC2[Autenticação com Login e Senha]
-    UC3[Recuperação de Senha]
-  end
 
-  subgraph Administrador
-    UC4[Bloquear e Desbloquear Usuários]
-    UC5[Registrar Log de Ações]
-    UC6[Cadastrar Pacientes]
-    UC7[Atualizar Dados Cadastrais]
-    UC8[Gerar Histórico de Atendimentos e Débitos]
-    UC9[Anexar Documentos ao Cadastro]
-    UC10[Buscar e Filtrar Pacientes]
-    UC11[Alteração de Débito]
-    UC12[Conformidade com LGPD]
-    UC13[Registrar Transações]
-    UC14[Interface Intuitiva e Responsiva]
-    UC15[Relatório de Procedimentos]
-    UC16[Acessar Histórico de Débito e Procedimentos]
-    UC17[Vincular Profissional ao Procedimento]
-    UC18[Cadastrar Profissionais]
-  end
-
-  Usuario -->|Interage| UC1
-  Usuario -->|Interage| UC2
-  Usuario -->|Interage| UC3
-
-  Administrador -->|Gerencia| UC4
-  Administrador -->|Acompanha| UC5
-  Administrador -->|Cadastra| UC6
-  Administrador -->|Edita| UC7
-  Administrador -->|Consulta| UC8
-  Administrador -->|Anexa| UC9
-  Administrador -->|Pesquisa| UC10
-  Administrador -->|Modifica| UC11
-  Administrador -->|Assegura| UC12
-  Administrador -->|Registra| UC13
-  Administrador -->|Desenha| UC14
-  Administrador -->|Gera| UC15
-  Administrador -->|Consulta| UC16
-  Administrador -->|Vincula| UC17
-  Administrador -->|Cadastra| UC18
-
-```
 
 ### 3.3. diagrama de atividade
 
