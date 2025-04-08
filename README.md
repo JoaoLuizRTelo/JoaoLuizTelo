@@ -24,6 +24,7 @@ ENGENHARIA DE SOFTWARE
       - [3.6.1. Diagrama de contexto](#361-diagrama-de-contexto)
       - [3.6.2. Diagrama de container](#362-diagrama-de-container)
       - [3.6.3. Diagrama de componente](#363-diagrama-de-componente)
+      - [3.6.4. Diagrama de código](#364-diagrama-de-código)
     - [**Explicação**:](#explicação-1)
   - [4. Hitórias de usuário](#4-hitórias-de-usuário)
     - [4.1. Cadastro de Usuários](#41-cadastro-de-usuários)
@@ -47,6 +48,7 @@ ENGENHARIA DE SOFTWARE
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de telas](#6-diagrama-de-navegação-de-telas)
   - [](#)
+  - [8. Pilha tecnológica](#8-pilha-tecnológica)
   - [Anexos](#anexos)
     - [A.1. Script SQL](#a1-script-sql)
     - [A.2. Dados artificiais para testes de banco](#a2-dados-artificiais-para-testes-de-banco)
@@ -290,55 +292,9 @@ Esse diagrama reflete os principais relacionamentos e entidades do sistema, ajud
 ![classe de uso](/diagrama-caso-de-uso.png)
 
 >[!tip]
->Faça um diagrama de classes de uso usando Markdown e Mermaid, para os requisitos abaixo:
+>Faça um diagrama de casos de uso usando Markdown e PlantUML, para os requisitos abaixo:
 
-```mermaid
-graph TD
-  subgraph Usuário
-    UC1[Cadastro de Usuários]
-    UC2[Autenticação com Login e Senha]
-    UC3[Recuperação de Senha]
-  end
-
-  subgraph Administrador
-    UC4[Bloquear e Desbloquear Usuários]
-    UC5[Registrar Log de Ações]
-    UC6[Cadastrar Pacientes]
-    UC7[Atualizar Dados Cadastrais]
-    UC8[Gerar Histórico de Atendimentos e Débitos]
-    UC9[Anexar Documentos ao Cadastro]
-    UC10[Buscar e Filtrar Pacientes]
-    UC11[Alteração de Débito]
-    UC12[Conformidade com LGPD]
-    UC13[Registrar Transações]
-    UC14[Interface Intuitiva e Responsiva]
-    UC15[Relatório de Procedimentos]
-    UC16[Acessar Histórico de Débito e Procedimentos]
-    UC17[Vincular Profissional ao Procedimento]
-    UC18[Cadastrar Profissionais]
-  end
-
-  Usuario -->|Interage| UC1
-  Usuario -->|Interage| UC2
-  Usuario -->|Interage| UC3
-
-  Administrador -->|Gerencia| UC4
-  Administrador -->|Acompanha| UC5
-  Administrador -->|Cadastra| UC6
-  Administrador -->|Edita| UC7
-  Administrador -->|Consulta| UC8
-  Administrador -->|Anexa| UC9
-  Administrador -->|Pesquisa| UC10
-  Administrador -->|Modifica| UC11
-  Administrador -->|Assegura| UC12
-  Administrador -->|Registra| UC13
-  Administrador -->|Desenha| UC14
-  Administrador -->|Gera| UC15
-  Administrador -->|Consulta| UC16
-  Administrador -->|Vincula| UC17
-  Administrador -->|Cadastra| UC18
-
-```
+![casosDeUso](/casos_de_uso.drawio.png)
 
 ### 3.3. diagrama de atividade
 
@@ -563,6 +519,7 @@ graph TB;
     Backend --> Relatorios
     Backend --> LGPD
 ```
+#### 3.6.4. Diagrama de código
 
 ---
 
@@ -662,6 +619,8 @@ graph TD
 ---
 ![diagrama de navegação de telas](/diagrama-navegacao-de-telas.png)
 ---
+## 8. Pilha tecnológica
+
 ## Anexos
 
 ### A.1. Script SQL
