@@ -13,7 +13,7 @@ ENGENHARIA DE SOFTWARE
       - [Explicação:](#explicação)
     - [3.2. Diagrama ER](#32-diagrama-er)
       - [Explicação das Entidades e Relacionamentos:](#explicação-das-entidades-e-relacionamentos)
-    - [3.2. Diagramas de classes de uso](#32-diagramas-de-classes-de-uso)
+    - [3.2. Diagramas de casos de uso](#32-diagramas-de-casos-de-uso)
     - [3.3. diagrama de atividade](#33-diagrama-de-atividade)
     - [Explicação do Diagrama:](#explicação-do-diagrama)
     - [3.4. diagrama de componentes](#34-diagrama-de-componentes)
@@ -287,7 +287,7 @@ erDiagram
 Esse diagrama reflete os principais relacionamentos e entidades do sistema, ajudando a visualizar a modelagem do banco de dados com base nos requisitos fornecidos.
 
 
-### 3.2. Diagramas de classes de uso
+### 3.2. Diagramas de casos de uso
 
 ![classe de uso](/diagrama-caso-de-uso.png)
 
