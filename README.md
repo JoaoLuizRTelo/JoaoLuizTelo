@@ -338,7 +338,7 @@ graph TD;
 ```
 
 ---
-### Explicação do Diagrama:
+#### Explicação do Diagrama:
 1. O **usuário** pode iniciar o fluxo cadastrando-se no sistema.
 2. O usuário realiza a **autenticação** para acessar o sistema.
 3. Caso esqueça a senha, pode seguir o fluxo de **recuperação**.
@@ -403,7 +403,7 @@ graph TD;
 
 ---
 
-### **Explicação do Diagrama**:
+#### **Explicação do Diagrama**:
 1. **Camada de Interface**:  
    - **`Interface do Usuário (Next.js)`**: A aplicação frontend onde os usuários interagem.  
    - Comunica-se com a API para realizar operações como login, cadastro, busca de pacientes, etc.
@@ -449,7 +449,7 @@ graph TD;
 
 ---
 
-### **Explicação do Diagrama**:
+#### **Explicação do Diagrama**:
 1. **Usuário**:  
    - Acessa a aplicação via **navegador**.
 
@@ -523,7 +523,7 @@ graph TB;
 
 ---
 
-### **Explicação**:
+#### **Explicação**:
 - O **diagrama de contexto** mostra a visão geral do sistema.
 - O **diagrama de container** detalha os principais módulos do sistema.
 - O **diagrama de componentes** descreve a organização interna do backend.
