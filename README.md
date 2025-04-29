@@ -15,9 +15,9 @@ ENGENHARIA DE SOFTWARE
       - [**Explicação das Entidades e Relacionamentos:**](#explicação-das-entidades-e-relacionamentos)
     - [3.2. Diagramas de casos de uso](#32-diagramas-de-casos-de-uso)
     - [3.3. diagrama de atividade](#33-diagrama-de-atividade)
-      - [**Explicação do Diagrama:**](#explicação-do-diagrama)
+    - [Explicação do Diagrama:](#explicação-do-diagrama)
     - [3.4. diagrama de componentes](#34-diagrama-de-componentes)
-      - [**Explicação do Diagrama**:](#explicação-do-diagrama-1)
+      - [**Explicação do Diagrama:**](#explicação-do-diagrama-1)
     - [3.5. diagrama de implantação](#35-diagrama-de-implantação)
       - [**Explicação do Diagrama**:](#explicação-do-diagrama-2)
     - [3.6. Diagramas C4](#36-diagramas-c4)
@@ -338,7 +338,7 @@ graph TD;
 ```
 
 ---
-#### **Explicação do Diagrama:**
+### Explicação do Diagrama:
 1. O **usuário** pode iniciar o fluxo cadastrando-se no sistema.
 2. O usuário realiza a **autenticação** para acessar o sistema.
 3. Caso esqueça a senha, pode seguir o fluxo de **recuperação**.
@@ -403,7 +403,7 @@ graph TD;
 
 ---
 
-#### **Explicação do Diagrama**:
+#### **Explicação do Diagrama:**
 1. **Camada de Interface**:  
    - **`Interface do Usuário (Next.js)`**: A aplicação frontend onde os usuários interagem.  
    - Comunica-se com a API para realizar operações como login, cadastro, busca de pacientes, etc.
