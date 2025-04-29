@@ -50,7 +50,9 @@ ENGENHARIA DE SOFTWARE
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de telas](#6-diagrama-de-navegação-de-telas)
   - [](#)
-  - [8. Pilha tecnológica](#8-pilha-tecnológica)
+  - [7. Pilha tecnológica](#7-pilha-tecnológica)
+  - [8. Cronograma, Gráfico de Gantt](#8-cronograma-gráfico-de-gantt)
+  - [9. Estimativa de custos](#9-estimativa-de-custos)
   - [Anexos](#anexos)
     - [A.1. Script SQL](#a1-script-sql)
     - [A.2. Dados artificiais para testes de banco](#a2-dados-artificiais-para-testes-de-banco)
@@ -620,7 +622,17 @@ graph TD
 ---
 ![diagrama de navegação de telas](/diagrama-navegacao-de-telas.png)
 ---
-## 8. Pilha tecnológica
+## 7. Pilha tecnológica
+
+
+
+## 8. Cronograma, Gráfico de Gantt
+![grafico](/grafico-gantt.png)
+
+## 9. Estimativa de custos
+![screenshot_](/custos.png)
+>Total: </br>
+>R$ 158.877,60
 
 ## Anexos
 
