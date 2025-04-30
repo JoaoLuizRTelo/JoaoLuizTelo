@@ -1,7 +1,11 @@
 # Gestão de débitos e procedimentos
 ENGENHARIA DE SOFTWARE 
 
+# Sumário
+
+
 - [Gestão de débitos e procedimentos](#gestão-de-débitos-e-procedimentos)
+- [Sumário](#sumário)
   - [1. Introdução](#1-introdução)
   - [2. Descrição](#2-descrição)
     - [2.1. Requisitos](#21-requisitos)
@@ -27,7 +31,6 @@ ENGENHARIA DE SOFTWARE
       - [3.6.3. Diagrama de componente](#363-diagrama-de-componente)
       - [3.6.4. Diagrama de código](#364-diagrama-de-código)
       - [**Explicação**:](#explicação-1)
-      - [**Explicação**:](#explicação-2)
   - [4. Hitórias de usuário](#4-hitórias-de-usuário)
     - [4.1. Cadastro de Usuários](#41-cadastro-de-usuários)
     - [4.2. Autenticação (Login e Senha)](#42-autenticação-login-e-senha)
@@ -116,7 +119,7 @@ Software para gerenciar débitos e procedimentos de clientes em uma clínica odo
 | Banco de dados postgree                                   | Não funcional      |
 | Design Responsivo                                         | Não funcional      |  
 
-
+[Voltar ao início](#sumário)
 ## 3. Diagramas
 
 ### 3.1. Diagrama de classes
@@ -206,6 +209,8 @@ classDiagram
 
 Esse diagrama reflete os requisitos funcionais do sistema e mostra como as classes e seus métodos podem interagir.
 
+[Voltar ao início](#sumário)
+
 
 ### 3.2. Diagrama ER
 
@@ -290,6 +295,7 @@ erDiagram
 
 Esse diagrama reflete os principais relacionamentos e entidades do sistema, ajudando a visualizar a modelagem do banco de dados com base nos requisitos fornecidos.
 
+[Voltar ao início](#sumário)
 
 ### 3.2. Diagramas de casos de uso
 
@@ -432,6 +438,8 @@ graph TD;
 
 Esse diagrama mostra a **arquitetura baseada em componentes** e como cada parte do sistema interage.
 
+[Voltar ao início](#sumário)
+
 
 ### 3.5. diagrama de implantação
 
@@ -473,6 +481,9 @@ graph TD;
 ---
 
 Esse diagrama mostra **como os componentes do sistema são implantados na infraestrutura**. 
+
+[Voltar ao início](#sumário)
+
 
 ### 3.6. Diagramas C4
 #### 3.6.1. Diagrama de contexto
@@ -529,13 +540,16 @@ graph TB;
 ---
 
 #### **Explicação**:
-#### **Explicação**:
+
 - O **diagrama de contexto** mostra a visão geral do sistema.
 - O **diagrama de container** detalha os principais módulos do sistema.
 - O **diagrama de componentes** descreve a organização interna do backend.
 
+[Voltar ao início](#sumário)
 
 ## 4. Hitórias de usuário
+>[!tip]
+>VER NO DOC
 
 ### 4.1. Cadastro de Usuários  
 **Como administrador**, eu quero cadastrar novos usuários no sistema para que eles possam acessá-lo e utilizar suas funcionalidades.
