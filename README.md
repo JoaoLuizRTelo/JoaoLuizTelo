@@ -689,8 +689,6 @@ graph TD
     Financeiro -->|Alterar Débitos| Debitos[Gerenciar Débitos]
 
 ```
----
-![diagrama de navegação de telas](/diagrama-navegacao-de-telas.png)
 
 [Voltar ao início](#sumário)
 
@@ -822,7 +820,7 @@ CREATE TABLE Transacao (
 ### A.2. Dados artificiais para testes de banco
 
 >[!tip]
-> Faça um Script para MySQL, usando os comandos Create Table anteriores, para popular as tabelas do banco com pelo menos % registros fictícios
+> Faça um Script para MySQL, usando os comandos Create Table anteriores, para popular as tabelas do banco com pelo menos 5 registros fictícios
 
 ```SQL
 -- Populando a tabela Usuario
