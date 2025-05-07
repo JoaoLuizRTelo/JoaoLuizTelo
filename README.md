@@ -48,6 +48,18 @@ ENGENHARIA DE SOFTWARE
       - [4.2.8. Relatório de Procedimentos Realizados](#428-relatório-de-procedimentos-realizados)
       - [4.2.9. Cadastro de Profissionais](#429-cadastro-de-profissionais)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
+    - [5.1. Cadastro de usuário](#51-cadastro-de-usuário)
+    - [5.2. Listagemm e gerenciamento de usuários](#52-listagemm-e-gerenciamento-de-usuários)
+    - [5.3. Cadastro de paciente](#53-cadastro-de-paciente)
+    - [5.4. Edição de paciente](#54-edição-de-paciente)
+    - [5.5. Listagem e Busca de Pacientes](#55-listagem-e-busca-de-pacientes)
+    - [5.6. Visualização do paciente](#56-visualização-do-paciente)
+    - [5.7. Registro de Atendimento](#57-registro-de-atendimento)
+    - [5.8. Cadastro de Profissional](#58-cadastro-de-profissional)
+    - [5.9. Listagem de Profissionais](#59-listagem-de-profissionais)
+    - [5.9. Listagem de Profissionais](#59-listagem-de-profissionais-1)
+    - [5.10. Cadastro de débito](#510-cadastro-de-débito)
+    - [5.11. Listagem de débito](#511-listagem-de-débito)
   - [6. Diagrama de navegação de telas](#6-diagrama-de-navegação-de-telas)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
     - [Linguagem Principal](#linguagem-principal)
@@ -607,7 +619,43 @@ graph TB;
 
 
 ## 5. Protótipo de telas
-![tela](/Interface-gestao-de-debito.png)
+### 5.1. Cadastro de usuário
+![cadastro de usuário](/cadastro-user.png)
+
+### 5.2. Listagemm e gerenciamento de usuários
+![gestao usuários](/Gestao-user.png)
+
+### 5.3. Cadastro de paciente
+![cadastro de paciente](/cadastro-paciente.png)
+
+### 5.4. Edição de paciente
+![edicao de paciente](/edicao-paciente.png)
+
+### 5.5. Listagem e Busca de Pacientes
+![Listagem e Busca de Pacientes](/listagem-pacientes.png)
+
+### 5.6. Visualização do paciente
+![Visualização do paciente](/tela-paciente.png)
+
+### 5.7. Registro de Atendimento
+![Registro de Atendimento](/registro-atendimento.png)
+
+### 5.8. Cadastro de Profissional
+![Cadastro de Profissional](/cadastro-profissional.png)
+
+### 5.9. Listagem de Profissionais
+![Listagem de Profissionais](/listagem-profissionais.png)
+
+### 5.9. Listagem de Profissionais
+![Listagem de Profissionais](/listagem-profissionais.png)
+
+### 5.10. Cadastro de débito
+![novo debito](/novo-debito.png)
+
+### 5.11. Listagem de débito
+![lista de debitos](/listagem-debitos.png)
+
+
 
 
 ## 6. Diagrama de navegação de telas
