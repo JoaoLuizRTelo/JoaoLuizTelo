@@ -48,8 +48,8 @@ ENGENHARIA DE SOFTWARE
       - [4.2.8. Relatório de Procedimentos Realizados](#428-relatório-de-procedimentos-realizados)
       - [4.2.9. Cadastro de Profissionais](#429-cadastro-de-profissionais)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
-    - [5.1. Cadastro de usuário](#51-cadastro-de-usuário)
-    - [5.2. Listagemm e gerenciamento de usuários](#52-listagemm-e-gerenciamento-de-usuários)
+    - [5.1. Tela de login](#51-tela-de-login)
+    - [5.2. Tela de recuperação de senha](#52-tela-de-recuperação-de-senha)
     - [5.3. Cadastro de paciente](#53-cadastro-de-paciente)
     - [5.4. Edição de paciente](#54-edição-de-paciente)
     - [5.5. Listagem e Busca de Pacientes](#55-listagem-e-busca-de-pacientes)
@@ -60,6 +60,8 @@ ENGENHARIA DE SOFTWARE
     - [5.9. Listagem de Profissionais](#59-listagem-de-profissionais-1)
     - [5.10. Cadastro de débito](#510-cadastro-de-débito)
     - [5.11. Listagem de débito](#511-listagem-de-débito)
+    - [5.12. Cadastro de usuário](#512-cadastro-de-usuário)
+    - [5.13. Listagemm e gerenciamento de usuários](#513-listagemm-e-gerenciamento-de-usuários)
   - [6. Diagrama de navegação de telas](#6-diagrama-de-navegação-de-telas)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
     - [Linguagem Principal](#linguagem-principal)
@@ -619,11 +621,11 @@ graph TB;
 
 
 ## 5. Protótipo de telas
-### 5.1. Cadastro de usuário
-![cadastro de usuário](/cadastro-user.png)
+### 5.1. Tela de login
+![login](/login.png)
 
-### 5.2. Listagemm e gerenciamento de usuários
-![gestao usuários](/Gestao-user.png)
+### 5.2. Tela de recuperação de senha
+![rec senha](/rec-senha.png)
 
 ### 5.3. Cadastro de paciente
 ![cadastro de paciente](/cadastro-paciente.png)
@@ -654,6 +656,12 @@ graph TB;
 
 ### 5.11. Listagem de débito
 ![lista de debitos](/listagem-debitos.png)
+
+### 5.12. Cadastro de usuário
+![cadastro de usuário](/cadastro-user.png)
+
+### 5.13. Listagemm e gerenciamento de usuários
+![gestao usuários](/Gestao-user.png)
 
 
 
