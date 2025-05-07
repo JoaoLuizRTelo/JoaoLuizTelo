@@ -26,34 +26,39 @@ ENGENHARIA DE SOFTWARE
       - [**Explicação do Diagrama**:](#explicação-do-diagrama-2)
       - [**Explicação do Diagrama**:](#explicação-do-diagrama-3)
     - [3.6. Diagramas C4](#36-diagramas-c4)
-      - [3.6.1. Diagrama de contexto](#361-diagrama-de-contexto)
-      - [3.6.2. Diagrama de container](#362-diagrama-de-container)
-      - [3.6.3. Diagrama de componente](#363-diagrama-de-componente)
-      - [3.6.4. Diagrama de código](#364-diagrama-de-código)
+      - [3.6.1. Diagrama C4 de contexto](#361-diagrama-c4-de-contexto)
+      - [3.6.2. Diagrama C4 de container](#362-diagrama-c4-de-container)
+      - [3.6.3. Diagrama C4 de componente](#363-diagrama-c4-de-componente)
+      - [3.6.4. Diagrama C4 de código](#364-diagrama-c4-de-código)
       - [**Explicação**:](#explicação-1)
   - [4. Hitórias de usuário](#4-hitórias-de-usuário)
-    - [4.1. Cadastro de Usuários](#41-cadastro-de-usuários)
-    - [4.2. Autenticação (Login e Senha)](#42-autenticação-login-e-senha)
-    - [4.3. Recuperação de Senha](#43-recuperação-de-senha)
-    - [4.4. Bloqueio e Desbloqueio de Usuários](#44-bloqueio-e-desbloqueio-de-usuários)
-    - [4.5. Registro de Log de Ações](#45-registro-de-log-de-ações)
-    - [4.6. Cadastro de Pacientes](#46-cadastro-de-pacientes)
-    - [4.7. Atualização de Dados Cadastrais](#47-atualização-de-dados-cadastrais)
-    - [4.8. Histórico de Atendimentos e Débitos](#48-histórico-de-atendimentos-e-débitos)
-    - [4.9. Anexar Documentos ao Cadastro](#49-anexar-documentos-ao-cadastro)
-    - [4.10. Busca e Filtros de Pacientes](#410-busca-e-filtros-de-pacientes)
-    - [4.11. Alteração do Valor do Débito](#411-alteração-do-valor-do-débito)
-    - [4.12. Conformidade com a LGPD](#412-conformidade-com-a-lgpd)
-    - [4.13. Registro de Transações](#413-registro-de-transações)
-    - [4.14. Interface Intuitiva e Responsiva](#414-interface-intuitiva-e-responsiva)
-    - [4.15. Relatório de Procedimentos Realizados](#415-relatório-de-procedimentos-realizados)
-    - [4.16. Acessar Histórico de Débito e Procedimentos](#416-acessar-histórico-de-débito-e-procedimentos)
-    - [4.17. Vincular Procedimentos aos Profissionais](#417-vincular-procedimentos-aos-profissionais)
-    - [4.18. Cadastro de Profissionais](#418-cadastro-de-profissionais)
+    - [4.1. Organização de Épicos e Features](#41-organização-de-épicos-e-features)
+      - [4.1.1. **Épico 1: Gestão de Usuários**](#411-épico-1-gestão-de-usuários)
+      - [4.1.2. **Épico 2: Gestão de Pacientes**](#412-épico-2-gestão-de-pacientes)
+      - [4.1.3. **Épico 3: Usabilidade e Interface**](#413-épico-3-usabilidade-e-interface)
+      - [4.1.4. **Épico 4: Relatórios e Profissionais**](#414-épico-4-relatórios-e-profissionais)
+    - [4.2. Jornada de Usuário](#42-jornada-de-usuário)
+      - [4.2.1. Cadastro de Usuários](#421-cadastro-de-usuários)
+      - [4.2.2. Autenticação (Login e Senha)](#422-autenticação-login-e-senha)
+      - [4.2.3. Recuperação de Senha](#423-recuperação-de-senha)
+      - [4.2.4. Cadastro de Pacientes](#424-cadastro-de-pacientes)
+      - [4.2.5. Atualização de Dados Cadastrais](#425-atualização-de-dados-cadastrais)
+      - [4.2.6. Histórico de Atendimentos e Débitos](#426-histórico-de-atendimentos-e-débitos)
+      - [4.2.7. Interface Intuitiva e Responsiva](#427-interface-intuitiva-e-responsiva)
+      - [4.2.8. Relatório de Procedimentos Realizados](#428-relatório-de-procedimentos-realizados)
+      - [4.2.9. Cadastro de Profissionais](#429-cadastro-de-profissionais)
   - [5. Protótipo de telas](#5-protótipo-de-telas)
   - [6. Diagrama de navegação de telas](#6-diagrama-de-navegação-de-telas)
-  - [](#)
   - [7. Pilha tecnológica](#7-pilha-tecnológica)
+    - [Linguagem Principal](#linguagem-principal)
+    - [Framework de Interface (Desktop)](#framework-de-interface-desktop)
+    - [Frontend](#frontend)
+    - [Banco de Dados Local](#banco-de-dados-local)
+    - [ORM](#orm)
+    - [Autenticação](#autenticação)
+    - [Empacotamento e Distribuição](#empacotamento-e-distribuição)
+    - [Ferramentas Auxiliares](#ferramentas-auxiliares)
+    - [Fluxo de Desenvolvimento](#fluxo-de-desenvolvimento)
   - [8. Cronograma, Gráfico de Gantt](#8-cronograma-gráfico-de-gantt)
   - [9. Estimativa de custos](#9-estimativa-de-custos)
   - [Anexos](#anexos)
@@ -486,7 +491,7 @@ Esse diagrama mostra **como os componentes do sistema são implantados na infrae
 
 
 ### 3.6. Diagramas C4
-#### 3.6.1. Diagrama de contexto
+#### 3.6.1. Diagrama C4 de contexto
 ```mermaid
 graph TB;
     Usuario["🧑 Usuário\n(Secretária, Médico, Administrador)"]
@@ -501,7 +506,7 @@ graph TB;
     API -->|Upload/Download| Armazenamento
 
 ```
-#### 3.6.2. Diagrama de container
+#### 3.6.2. Diagrama C4 de container
 ```mermaid
 graph TB;
     Usuario["🧑 Usuário\n(Navegador)"]
@@ -515,7 +520,7 @@ graph TB;
     Backend -->|Consulta/Escrita| BancoDeDados
     Backend -->|Armazena/Recupera arquivos| Armazenamento
 ```
-#### 3.6.3. Diagrama de componente
+#### 3.6.3. Diagrama C4 de componente
 ```mermaid
 graph TB;
     Backend["🔧 Backend\n(FastAPI)"]
@@ -535,7 +540,7 @@ graph TB;
     Backend --> Relatorios
     Backend --> LGPD
 ```
-#### 3.6.4. Diagrama de código
+#### 3.6.4. Diagrama C4 de código
 
 ---
 
@@ -548,62 +553,57 @@ graph TB;
 [Voltar ao início](#sumário)
 
 ## 4. Hitórias de usuário
->[!tip]
->VER NO DOC
 
-### 4.1. Cadastro de Usuários  
+### 4.1. Organização de Épicos e Features
+
+#### 4.1.1. **Épico 1: Gestão de Usuários**
+- Feature: Cadastro de usuários
+- Feature: Autenticação (login e senha)
+- Feature: Recuperação de senha
+
+#### 4.1.2. **Épico 2: Gestão de Pacientes**
+- Feature: Cadastro de pacientes
+- Feature: Atualização de dados cadastrais
+- Feature: Acesso ao histórico de atendimentos e débitos
+
+#### 4.1.3. **Épico 3: Usabilidade e Interface**
+- Feature: Interface intuitiva e responsiva
+
+#### 4.1.4. **Épico 4: Relatórios e Profissionais**
+- Feature: Relatório de procedimentos realizados
+- Feature: Cadastro de profissionais
+
+### 4.2. Jornada de Usuário
+
+#### 4.2.1. Cadastro de Usuários  
 **Como administrador**, eu quero cadastrar novos usuários no sistema para que eles possam acessá-lo e utilizar suas funcionalidades.
 
-### 4.2. Autenticação (Login e Senha)  
+#### 4.2.2. Autenticação (Login e Senha)  
 **Como usuário**, eu quero fazer login no sistema utilizando e-mail e senha para que eu possa acessar minhas informações e funcionalidades disponíveis.
 
-### 4.3. Recuperação de Senha  
+#### 4.2.3. Recuperação de Senha  
 **Como usuário**, eu quero poder recuperar minha senha caso eu a esqueça para que eu possa continuar acessando o sistema sem precisar de suporte técnico.
 
-### 4.4. Bloqueio e Desbloqueio de Usuários  
-**Como administrador**, eu quero bloquear e desbloquear usuários para que eu possa controlar o acesso ao sistema e garantir a segurança das informações.
-
-### 4.5. Registro de Log de Ações  
-**Como administrador**, eu quero visualizar um histórico de todas as ações realizadas pelos usuários para que eu possa monitorar atividades e garantir a transparência e segurança do sistema.
-
-### 4.6. Cadastro de Pacientes  
+#### 4.2.4. Cadastro de Pacientes  
 **Como recepcionista**, eu quero cadastrar pacientes com informações completas para que os profissionais possam acessá-las durante os atendimentos.
 
-### 4.7. Atualização de Dados Cadastrais  
+#### 4.2.5. Atualização de Dados Cadastrais  
 **Como usuário autorizado**, eu quero atualizar os dados cadastrais dos pacientes para que as informações estejam sempre corretas e atualizadas.
 
-### 4.8. Histórico de Atendimentos e Débitos  
+#### 4.2.6. Histórico de Atendimentos e Débitos  
 **Como profissional de saúde**, eu quero acessar o histórico de atendimentos e débitos de um paciente para que eu possa ter um acompanhamento completo do seu tratamento.
 
-### 4.9. Anexar Documentos ao Cadastro  
-**Como usuário autorizado**, eu quero anexar documentos ao cadastro dos pacientes para que todas as informações relevantes fiquem centralizadas e acessíveis.
-
-### 4.10. Busca e Filtros de Pacientes  
-**Como usuário autorizado**, eu quero pesquisar pacientes e aplicar filtros para que eu encontre rapidamente as informações desejadas.
-
-### 4.11. Alteração do Valor do Débito  
-**Como administrador**, eu quero aumentar ou reduzir o valor do débito de um paciente para que eu possa corrigir valores e manter os registros financeiros atualizados.
-
-### 4.12. Conformidade com a LGPD  
-**Como administrador**, eu quero garantir que o sistema esteja em conformidade com a LGPD para que os dados dos pacientes sejam protegidos conforme a legislação.
-
-### 4.13. Registro de Transações  
-**Como administrador**, eu quero que todas as transações financeiras sejam registradas para que eu possa ter controle e transparência sobre os valores movimentados.
-
-### 4.14. Interface Intuitiva e Responsiva  
+#### 4.2.7. Interface Intuitiva e Responsiva  
 **Como usuário**, eu quero que a interface do sistema seja intuitiva e responsiva para que eu possa utilizá-la com facilidade em diferentes dispositivos.
 
-### 4.15. Relatório de Procedimentos Realizados  
+#### 4.2.8. Relatório de Procedimentos Realizados  
 **Como profissional de saúde**, eu quero gerar relatórios dos procedimentos realizados para que eu possa acompanhar e analisar os atendimentos feitos.
 
-### 4.16. Acessar Histórico de Débito e Procedimentos  
-**Como administrador**, eu quero acessar o histórico de débitos e procedimentos de um paciente para que eu possa conferir os registros financeiros e clínicos com precisão.
-
-### 4.17. Vincular Procedimentos aos Profissionais  
-**Como administrador**, eu quero vincular os procedimentos realizados ao profissional responsável para que eu possa manter um registro claro de quem realizou cada atendimento.
-
-### 4.18. Cadastro de Profissionais  
+#### 4.2.9. Cadastro de Profissionais  
 **Como administrador**, eu quero cadastrar profissionais no sistema para que eles possam ser associados aos procedimentos e pacientes atendidos.
+
+
+[Voltar ao início](#sumário)
 
 
 ## 5. Protótipo de telas
@@ -635,8 +635,52 @@ graph TD
 ```
 ---
 ![diagrama de navegação de telas](/diagrama-navegacao-de-telas.png)
----
+
+[Voltar ao início](#sumário)
+
+
 ## 7. Pilha tecnológica
+
+### Linguagem Principal
+- **TypeScript**: Linguagem com tipagem forte, utilizada tanto no front-end quanto no back-end local.
+
+### Framework de Interface (Desktop)
+- **Tauri**: Framework leve e seguro para desenvolvimento de aplicações desktop multiplataforma (Windows, macOS, Linux). Utiliza webview e integra com código em Rust.
+- **Alternativas**:
+  - Electron (mais maduro, porém mais pesado)
+  - Flutter (caso deseje o mesmo código para desktop e mobile)
+
+### Frontend
+- **React**: Biblioteca moderna para criação de interfaces reativas.
+- **Vite**: Empacotador de módulos rápido e moderno.
+- **Tailwind CSS**: Framework utilitário para criação de interfaces com design consistente e responsivo.
+
+### Banco de Dados Local
+- **SQLite**: Banco de dados relacional leve, ideal para aplicações locais e offline.
+- Armazenamento de dados diretamente em disco, sem necessidade de servidor de banco.
+
+### ORM
+- **Drizzle ORM** ou **Prisma**: ORMs modernos com suporte a TypeScript e integração com SQLite.
+- Facilita a manipulação de dados com segurança e produtividade.
+
+### Autenticação
+- Autenticação local com login e senha utilizando:
+  - Hash de senha com `bcrypt`
+  - Tokens locais (`JWT` ou equivalente)
+  - Armazenamento seguro em banco de dados local
+
+### Empacotamento e Distribuição
+- **Tauri Build**: Geração de instaladores para Windows (.exe), macOS (.dmg) e Linux (.AppImage), com tamanho reduzido e boa performance.
+
+### Ferramentas Auxiliares
+- **Figma**: Ferramenta para prototipação de interfaces.
+- **Storybook** (opcional): Documentação visual e desenvolvimento de componentes isolados.
+
+### Fluxo de Desenvolvimento
+1. Interface construída com React, Vite e Tailwind.
+2. Banco de dados local SQLite acessado via ORM.
+3. Lógica e persistência implementadas em TypeScript.
+4. Aplicação empacotada com Tauri para execução local.
 
 
 
@@ -646,7 +690,7 @@ graph TD
 ## 9. Estimativa de custos
 ![screenshot_](/custos.png)
 >Total: </br>
->R$ 158.877,60
+>R$ 158.877,60 para 6 meses
 
 ## Anexos
 
